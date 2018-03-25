@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- we want the dashboard to have a side menu regardless of the viewport thats why I used "col" instead 
+    of col-md-* that maked it responsive when it gets to a medium size screen (eg. smartphones)-->
+<div class="row">
+    <div class="col-2">
+        <div class="nav bg-dark h-100 flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-home-tab"  href="/dashboard/profilepage" role="tab"  aria-selected="true"><span class="fa fa-user"></span> Profile</a>
+            <a class="nav-link" id="v-pills-profile-tab" href="/dashboard/editprofile" role="tab"  aria-selected="false"><span class="fa fa-pencil-square"></span> Edit Profile</a>
+            <a class="nav-link" id="v-pills-messages-tab" href="/dashboard/messages" role="tab"  aria-selected="false"><span class="fa fa-envelope"></span> Messages</a>
+            <a class="nav-link" id="v-pills-settings-tab" href="/dashboard/settings" role="tab"  aria-selected="false"><span class="fa fa-spinner"></span> Settings</a>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="tab-content" id="v-pills-tabContent">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+
+

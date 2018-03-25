@@ -1,0 +1,33 @@
+﻿body,html {
+    padding: 0px;
+    margin:0px;
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*this is a style I will apply to the main jumbotron to make the baground image display correctly*/
+.main-jumbotron {
+    background-image: url('img/main-jumbotron.png');
+    background-size: cover;
+    height: 420px;
+    -moz-background-clip:  border-box;
+    -webkit-background-clip:  border-box;
+    background-clip:  border-box;
+}
+.card-image{
+    height:400px;
+
+}
+

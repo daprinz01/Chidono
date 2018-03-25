@@ -1,0 +1,48 @@
+﻿@model Chidono.Models.ProfileViewModels
+
+@{
+    ViewBag.Title = "ProfilePage";
+    Layout = "~/Views/Dashboard/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        @if (ViewBag.imgExist == true)
+        {
+            
+            <img src=@Url.Content("/Service/DisplayContent?fileId="+Model.ImgId) alt="Profile Image" class="img-fluid rounded-circle" width="200" height="200"/>
+        }
+        else
+        {
+            <span class="fa fa-user fa-3x"></span>
+        }
+
+    </div>
+    <div class="col-md-4">
+        <h4>Personal Information</h4>
+        Name: @Html.DisplayFor(m => m.Name)<br />
+        Username: @Html.DisplayFor(m => m.Username)<br />
+        Age: @Html.DisplayFor(m => m.Age)<br />
+        Address: @Html.DisplayFor(m => m.Address)
+    </div>
+    <div class="col-md-4">
+        <h4>School Details</h4>
+        Department: @Html.DisplayFor(m => m.Department)<br />
+        Faculty: @Html.DisplayFor(m => m.Faculty)<br />
+        Institution: @Html.DisplayFor(m => m.University)
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h4>NYSC Posting Details</h4>
+        Registration Date: @Html.DisplayFor(m => m.RegDate)<br />
+        Deployment Date: @Html.DisplayFor(m => m.DeployDate)<br />
+        First Choice: @Html.DisplayFor(m => m.StateChoice1)<br />
+        Second Choice: @Html.DisplayFor(m => m.StateChoice2)<br />
+        Third Choice: @Html.DisplayFor(m => m.StateChoice3)
+    </div>
+</div>
+
+
+
+
